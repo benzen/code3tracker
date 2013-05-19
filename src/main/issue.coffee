@@ -1,5 +1,4 @@
 mongoose = require("mongoose")
-
 IssueSchema = mongoose.Schema( 
   title: String
   author: String

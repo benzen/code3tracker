@@ -1,0 +1,6 @@
+db:
+  host: localhost
+  port: 27017
+  username: tracker
+  password: tracker
+  db_name: tracker_db

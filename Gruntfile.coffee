@@ -28,6 +28,14 @@ module.exports = (grunt)->
     nodeunit:
       all: ['src/test/*_test.coffee']
 
+    copy:
+      main:
+        files:[
+          src: ['src/main/properties.yml']
+          dest: "build/properties.yml" 
+        ]
+        
+
 #
 #    watch: 
 #      scripts:
@@ -43,8 +51,9 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-nodeunit')
+  grunt.loadNpmTasks('grunt-contrib-copy')
 # grunt.loadNpmTasks('grunt-contrib-watch')
   
 
   # Default task(s)
-  grunt.registerTask('default', ['coffee','uglify','nodeunit'])
+  grunt.registerTask('default', ['coffee','uglify','copy','nodeunit'])
